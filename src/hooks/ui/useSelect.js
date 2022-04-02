@@ -29,8 +29,8 @@ const sizeChange = (option) => {
 }
 
 const filterProducts = async () => {
-    if (data.name.id || data.model.id) {
-        await getProducts(`&company_name${data.name.id?'='+data.name.id:'__null'}&marka${data.model.id?'='+data.model.id:'__null'}`)
+    if (data.name && data.name.id || data.model && data.model.id) {
+        await getProducts(`&company_name${data.name && data.name.id?'='+data.name.id:'__null'}&marka${data.model && data.model.id?'='+data.model.id:'__null'}`)
     }
 }
 const filterProductsDelete = async () => {

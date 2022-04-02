@@ -47,17 +47,15 @@ import Card from "./card";
 import Btn from "./Btn";
 import {company, marka} from "../../hooks/about/useAbout";
 import {useFilterType} from "../../hooks/product/useFilterType";
-import Loader
-  from "./Loader";
-import NotFounds
-  from "./notFounds";
+import Loader from "./Loader";
+import NotFounds from "./notFounds";
 
 export default {
   name: "Filter",
   components: {NotFounds, Loader, Btn, FilterSelect, Card},
   setup() {
-    const { productsFilter, loaderProducts } = useFilterType()
     const {data, modelChange, nameChange, filterProducts, filterProductsDelete} = select()
+    const { productsFilter, loaderProducts } = useFilterType(data)
     return {nameChange, modelChange, filterProducts, filterProductsDelete, data, productsFilter, company, marka, loaderProducts}
   }
 }

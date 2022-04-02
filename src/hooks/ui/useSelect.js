@@ -14,6 +14,8 @@ const data = reactive({
     model: null,
 //    for sizes
     size: JSON.parse(localStorage.getItem('size')) || '195/65/15',
+    filterName: null,
+    filterModel: null
 })
 
 const nameChange = (option) => {
@@ -30,6 +32,8 @@ const sizeChange = (option) => {
 
 const filterProducts = async () => {
     if (data.name && data.name.id || data.model && data.model.id) {
+        data.filterName = data.name
+        data.filterModel = data.model
         await getProducts(`&company_name${data.name && data.name.id?'='+data.name.id:'__null'}&marka${data.model && data.model.id?'='+data.model.id:'__null'}`)
     }
 }
@@ -37,6 +41,8 @@ const filterProductsDelete = async () => {
     await getProducts()
     data.name = null
     data.model = null
+    data.filterName = null
+    data.filterModel = null
 }
 
 export function select () {

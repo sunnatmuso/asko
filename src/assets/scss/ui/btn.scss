@@ -1,0 +1,39 @@
+.btn{
+  display: inline-block;
+  &__content{
+    a{
+      display: inline-block;
+      &.more{
+        color: $textCard_red;
+        text-decoration: underline;
+      }
+      &.seeMaps{
+        color: $text_red;
+        border-bottom: 1px dashed $text_red;
+      }
+      &.secondary{
+        color: $text_gray2;
+        background-color: $bg_gray6;
+        @include border($border_gray5);
+        border-radius: $space3;
+        box-shadow: $depth4;
+        padding: $space3 $space8;
+      }
+      &.green, &.red, &.blue{
+        border-radius: $space3;
+        font-size: 14px;
+        color: $text_white;
+        padding: $space3 $space8;
+      }
+      &.red{
+        background-color: $bg_red;
+      }
+      &.green{
+        background-color: $bg_green;
+      }
+      &.blue{
+        background-color: $bg_blue;
+      }
+    }
+  }
+}

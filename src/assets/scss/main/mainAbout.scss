@@ -1,0 +1,85 @@
+$thumbColor: #22559E;
+.mainAbout{
+  min-height: 610px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../image/mainAboutBg.png") bottom no-repeat;
+  background-size: cover;
+  color: $text_white;
+  text-align: center;
+  padding: $space16 0 $space13 0;
+  margin-top: $space20;
+  @include media($sm){
+    padding: $space5 0 $space13 0;
+    margin-top: $space10;
+    min-height: unset;
+  }
+  & > .container{
+    padding: 0 $space8;
+  }
+  &__title{
+    h1{
+      margin-bottom: $space2;
+    }
+  }
+  &.playNone{
+    .splide__arrows{
+      display: none;
+    }
+  }
+  &__wrapper{
+    .mains{
+      margin: $space16 0 $space13 0;
+      padding: $space10 $space20;
+      border-radius: $space2;
+      border: 1px solid $border_gray3;
+      @include rgba(0.68);
+      @include media($md){
+        padding: $space10;
+      }
+      @include media($sm){
+        margin: $space6 0 $space7 0;
+        padding: $space6;
+      }
+
+      .splide__arrows{
+
+        .splide__arrow{
+          @include wh(3em);
+          border: 1px solid $border_white;
+          svg{
+            fill: $icon_white;
+          }
+        }
+        .splide__arrow--next,
+        .splide__arrow--prev{
+          @include rgba(0.9);
+        }
+        .splide__arrow--next{
+          right: -1.5em;
+        }
+        .splide__arrow--prev{
+          left: -1.5em;
+        }
+      }
+    }
+    .mainThumbs{
+
+      .splide__slide{
+        border-radius: $space2;
+        border: 1px solid $border_gray3 !important;
+        @include rgba(0.6);
+        @include flex(flex, center, center);
+        &:hover{
+          background-color: $thumbColor;
+        }
+        &.is-active{
+          border: 1px solid $border_gray5 !important;
+          background-color: $thumbColor;
+        }
+      }
+
+      .splide__list{
+        justify-content: center;
+      }
+    }
+  }
+}

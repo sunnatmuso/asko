@@ -1,0 +1,71 @@
+.company{
+  &__numberCompany{
+    background-image: url("../image/company/Rectangle 1348.webp");
+    &-items{
+      @include grid(4, $space4);
+      align-items: center;
+      min-height: 300px;
+      @include media($md){
+        @include grid(2, $space4);
+      }
+      @include media($mobile){
+        @include grid(2, 0);
+      }
+    }
+    &-item{
+      @include flex(flex, center, center);
+      flex-direction: column;
+
+      .bigFont{
+        color: $text_white;
+      }
+      .body{
+        font-weight: 400;
+        color: $text_gray4;
+        margin-top: $space2;
+      }
+    }
+  }
+  &__about{
+    margin: $space8 0;
+    & > .container {
+      @include media($sm){
+        padding: 0;
+      }
+    }
+    &-wrap{
+      background-color: $bg_White;
+      .inter{
+        padding: $space4 $space5;
+        border-bottom: 1px solid $border_gray5;
+      }
+      .paragraph{
+        padding: $space5;
+        text-align: justify;
+        white-space: break-spaces;
+        @include media($sm){
+          padding: $space3;
+        }
+        img {
+          float: right;
+          clear: right;
+          margin: $space5 0 $space5 $space5;
+          width: 580px;
+          height: 338px;
+          @include media($lg){
+            width: 100%;
+            height: unset;
+          }
+        }
+
+        &::before {
+          content: "";
+          float: right;
+          width: 0;
+          height: 189px;
+          //height: var(--nudge-float);
+        }
+      }
+    }
+  }
+}

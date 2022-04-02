@@ -1,0 +1,18 @@
+.social {
+  @include flex(inline-flex, center, center);
+  a{
+    display: inline-flex;
+    margin: 0 $space;
+    border-radius: 100px;
+  }
+  .socialIcon {
+    fill: $icon_white;
+  }
+
+  &.red{
+    background: $bg_White;
+    .socialIcon {
+      fill: $icon_red;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.carouselWrapper{
+  &.playNone{
+    .splide__arrows{
+      display: none;
+    }
+  }
+
+  .splide__arrows{
+    .splide__arrow{
+      @include wh(3em);
+      border: 1px solid $border_gray5;
+      svg{
+        fill: $icon_gray3;
+      }
+    }
+    .splide__arrow--next,
+    .splide__arrow--prev{
+      @include rgbaWhite(0.9);
+    }
+    .splide__arrow--next{
+      right: -0.3em;
+    }
+    .splide__arrow--prev{
+      left: -0.3em;
+    }
+  }
+}

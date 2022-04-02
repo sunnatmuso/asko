@@ -1,0 +1,103 @@
+.footer{
+  margin-top: auto;
+  padding: $space15 0;
+  background: $bg_White url("../../assets/image/footer_bg.png") left no-repeat;
+  @include media($xl){
+    background-size: 545px 100%;
+  }
+  @include media($md){
+    padding: $space5 0;
+  }
+
+  &__top{
+    .paragraph{
+      text-align: center;
+      color: $text_gray1;
+      margin: $space15 0 $space13 0;
+      @include media($md){
+        margin: $space5 0 $space10 0;
+      }
+    }
+  }
+  &__logo{
+    width: 270px;
+    height: 60px;
+    margin: 0 auto;
+    @include media($sm){
+      width: 170px;
+      height: 40px;
+    }
+    img{
+      @include wh(100%)
+    }
+  }
+  &_down{
+    @include grid(3, $space2);
+    @include media($md){
+      @include grid(2, $space2);
+    }
+    @include media($sm){
+      @include grid(1, $space7);
+      text-align: center;
+      .footer__number{
+        justify-content: center;
+      }
+    }
+  }
+  &__item{
+    .inter{
+      margin-bottom: $space5;
+    }
+  }
+  &__number, &__location{
+    @include flex(flex, flex-start, flex-start);
+    margin: $space 0;
+    .body_2{
+      color: $text_gray2;
+      margin-left: $space;
+    }
+    .location{
+      min-width: $space6;
+    }
+  }
+}
+
+.allReserved{
+  background: $bg_bread;
+  color: $text_white;
+  @include flex(flex, center, center);
+  text-align: center;
+  @include media($md){
+    margin-bottom: 58px;
+  }
+  .viento{
+    width: 63px;
+    height: 18px;
+    margin: 0 $space -4px $space;
+    animation-name: my-animation;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    @keyframes my-animation {
+      from {
+        fill: $text_white;
+      }
+      to {
+        fill: $bg_gray1;
+      }
+    }
+  }
+
+  .small{
+    @include flex(flex, center, center);
+    padding: 0 $space3;
+    min-height: 32px;
+  }
+
+  @include media($mobile){
+    .small{
+      font-size: 10px;
+    }
+  }
+}

@@ -1,0 +1,119 @@
+.header{
+  &__top{
+    background: $bg_bread;
+   .headerTop {
+      min-height: 50px;
+      @include flex(flex, space-between, center);
+     position: relative;
+     &::after{
+       content: "";
+       position: absolute;
+       left: -10px;
+       width: 1px;
+       height: 18px;
+       background: $bg_White;
+     }
+
+     &__right{
+       @include flex(flex, center, center);
+     }
+    }
+  }
+  &__search{
+    height: 34px;
+    width: 270px;
+    background: $bg_gray1;
+    border-radius: $space;
+    padding: 0 $space8 0 $space4;
+    margin-right: $space7;
+    @include media($md){
+      margin-right: $space13;
+    }
+    input{
+      @include wh(100%);
+      color: $text_white;
+      &::placeholder{
+        color: $text_white;
+      }
+    }
+    position: relative;
+    .search {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(-10px, 8px);
+      fill: $icon_white;
+      stroke: $icon-white;
+    }
+    .close{
+      width: $space6;
+      top: $space;
+    }
+  }
+
+  &__down{
+    .headerDown {
+      @include flex(flex, space-between, center);
+      &__logo {
+        width: 169px;
+        height: 38px;
+        @include media($xl){
+          width: 120px;
+          height: 28px;
+        }
+        img {
+          @include wh(100%);
+        }
+      }
+      &__right{
+          @include flex(flex, space-between, center);
+        min-height: 80px;
+        width: 75%;
+
+        @include media($xl){
+          min-height: 65px;
+          width: 80%;
+        }
+        a {
+          color: $text_gray1;
+
+          &:last-child{
+            @include media($lg){
+              display: none;
+            }
+          }
+        }
+        .router-link-exact-active, a:hover{
+          color: $text_red;
+        }
+      }
+      &__products{
+        position: relative;
+        & > .p{
+          @include flex(flex, center, center);
+        }
+        &-link {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background: $bg_White;
+          border-radius: $space2;
+          box-shadow: $depth1;
+          z-index: 99;
+          a{
+            display: block;
+            padding: $space3 $space4;
+            border-bottom: 1px solid $border_gray5;
+            &:last-child{
+              border-bottom: 1px solid transparent;
+            }
+            &:hover{
+              background: $bg_gray6;
+              //color: $text_red;
+            }
+          }
+        }
+      }
+    }
+  }
+}

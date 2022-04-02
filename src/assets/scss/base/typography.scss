@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+$rubik: 'Rubik', sans-serif;
+$inter: 'Inter', sans-serif;
+
+.bigFont{
+  font: normal 400 48px/57px $rubik;
+  @include media($mobile){
+    font-size: 36px;
+  }
+}
+.h1, h1 {
+  font: normal 500 36px/43px $rubik;
+  @include media($sm){
+    font-size: 25px;
+  }
+  @include media($smMobile){
+    font-size: 20px;
+  }
+}
+.h2, h2 {
+  font: normal 600 26px/31px $rubik;
+}
+.badge{
+  font: normal 400 11px/140% $rubik;
+}
+.small {
+  font: normal 400 12px/14px $rubik;
+}
+.body {
+  font: normal 500 14px/17px $rubik;
+}
+.cardText{
+  font: normal 400 14px/150% $rubik;
+}
+.markets {
+  font: normal 400 15px/18px $rubik;
+}
+.body_2 {
+  font: normal 400 16px/24px $rubik;
+}
+.paragraph{
+  font: normal 400 18px/150% $rubik;
+  @include media($sm){
+    font-size: 15px;
+  }
+}
+.footerText {
+  font: normal 700 18px/150% $rubik;
+}
+.buttonText {
+  font: normal 500 18px/150% $rubik;
+}
+.inter {
+  font: normal 700 18px/24px $inter;
+}

@@ -1,0 +1,39 @@
+.topBanner{
+  .container{
+    min-height: 300px;
+    @include flex(flex, flex-end, flex-start);
+    flex-direction: column;
+    h2{
+      color: $text_white;
+    }
+    .body{
+      color: $text_gray4;
+      margin: $space5 0 $space7 0;
+    }
+  }
+  &.shina{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../image/topBanner/shina.webp');
+  }
+  &.diska{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../image/topBanner/diska.webp');
+  }
+  &.akkumlyator{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../image/topBanner/akkumlyator.webp');
+  }
+  &.company{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../image/topBanner/company.webp');
+  }
+  &.location{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../image/topBanner/location.webp');
+  }
+  &.contact{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../image/topBanner/contact.webp');
+  }
+  @include media($md){
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat !important;
+    & > .container{
+      min-height: 200px;
+    }
+  }
+}

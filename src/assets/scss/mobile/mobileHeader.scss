@@ -1,0 +1,29 @@
+.mobileHeader{
+  background: $bg_gray6;
+  &__content{
+    min-height: 50px;
+    @include flex(flex, space-between, center);
+  }
+  &__right{
+    margin-right: $space10;
+
+    .searchMobile{
+      fill: $icon_gray1;
+      stroke-width: $space;
+    }
+
+    .header__search{
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 0;
+      width: 100%;
+      min-height: 50px;
+      border-radius: 0;
+      z-index: 999;
+    }
+  }
+  &__searchMobile{
+    margin-top: $space;
+  }
+}

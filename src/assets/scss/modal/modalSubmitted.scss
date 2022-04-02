@@ -1,0 +1,20 @@
+.modalSubmitted{
+  &__items{
+    text-align: center;
+  }
+  &__text{
+    .body_2{
+      font-weight: 500;
+    }
+    .cardText{
+      margin: $space3 0 $space7 0;
+    }
+  }
+  &__close .btn, &__close .btn__content a.blue {
+    width: 100%;
+  }
+  &__img{
+    margin: $space7 0;
+    pointer-events: none;
+  }
+}

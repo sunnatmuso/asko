@@ -1,0 +1,79 @@
+@mixin media($breakpoint){
+  @media (max-width: $breakpoint) {@content;}
+}
+
+@mixin flex($display, $jc, $il){
+  display: $display;
+  justify-content: $jc;
+  align-items: $il;
+}
+
+@mixin grid ($repeat, $around){
+  display: grid;
+  grid-template-columns: repeat($repeat, 1fr);
+  grid-gap: $around;
+}
+
+@mixin gridMinMax ($repeat, $around){
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($repeat, 1fr));
+  grid-gap: $around;
+}
+
+@mixin border($color){
+  border: 1px solid $color;
+}
+
+@mixin rgba($alpha){
+  background: rgba(0, 0, 0, $alpha);
+}
+@mixin rgbaWhite($alpha){
+  background: rgba(255, 255, 255, $alpha);
+}
+
+@mixin wh($wh){
+  width: $wh;
+  height: $wh;
+}
+
+
+@mixin btn($right, $top) {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: $top;
+  right: $right;
+  transition-duration: 0.5s;
+}
+
+@mixin icon($height, $width) {
+  transition-duration: 0.5s;
+  position: absolute;
+  height: $height;
+  width: $width;
+  top: 30px;
+  background-color: $bg_gray1;
+  z-index: 99;
+}
+
+@mixin icon-before($height, $width, $top) {
+  transition-duration: 0.5s;
+  position: absolute;
+  width: $width;
+  height: $height;
+  background-color: $bg_gray1;
+  content: "";
+  top: $top;
+  z-index: 99;
+}
+
+@mixin icon-after($height, $width, $top) {
+  transition-duration: 0.5s;
+  position: absolute;
+  width: $width;
+  height: $height;
+  background-color: $bg_gray1;
+  content: "";
+  top: $top;
+  z-index: 99;
+}

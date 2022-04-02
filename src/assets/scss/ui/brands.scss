@@ -1,0 +1,14 @@
+.brands{
+  padding: $space5 $space2;
+  background-color: $bg_White;
+  display: inline-block;
+  border-radius: $space2;
+  &__image{
+    width: 154px;
+    height: 70px;
+    img{
+      @include wh(100%);
+      object-fit: contain;
+    }
+  }
+}

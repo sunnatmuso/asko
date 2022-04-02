@@ -1,0 +1,51 @@
+.contact{
+  &__content{
+    &-maps{
+      width: 100%;
+      height: 600px;
+      iframe{
+        border: $space5 solid $border_white;
+        border-radius: $space2;
+        @include wh(100%);
+        @include media($sm){
+          border: $space solid $border_white;
+        }
+      }
+    }
+    &-info{
+      background-color: $bg-White;
+      border-radius: $space2;
+      margin: $space7 0 $space13 0;
+
+      .paragraph{
+        padding: $space4 $space5;
+        border-bottom: 1px solid $border_gray5;
+      }
+    }
+    &-items{
+      //padding: $space5;
+      @include gridMinMax(280px, $space5)
+    }
+    &-item{
+      @include flex(flex, flex-start, center);
+      padding: $space5;
+      .icon{
+        display: inline-block;
+        padding: $space3 $space4;
+        background-color: $bgContact_red;
+      }
+      .title{
+        margin-left: $space5;
+        .markets a{
+          display: inline-block;
+          color: $text_gray2;
+          margin: $space 0;
+        }
+
+        &.nonActive{
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}

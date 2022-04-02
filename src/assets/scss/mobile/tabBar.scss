@@ -1,0 +1,47 @@
+.tabBar{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: $bg_White;
+  z-index: 99999;
+
+  &__content{
+    @include grid(5, 0);
+    a{
+      @include flex(flex, center, center);
+      flex-direction: column;
+      padding: $space2 0;
+      color: $text_gray4;
+      &.router-link-exact-active, a:hover{
+        color: $text_blue;
+        svg{
+          fill: $icon_blue;
+        }
+      }
+      svg{
+        margin-bottom: $space;
+        fill: $icon_gray4;
+      }
+      &.chats{
+        background: linear-gradient(135deg, #337CE7, #023580, #337CE7, #023580);
+        animation: 3s linear 1s infinite alternate bgChats;
+        background-size: 300% 300%;
+        & > svg {
+          fill: $icon_white;
+        }
+        @keyframes bgChats {
+          0% {
+            background-position: 0 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0 50%;
+          }
+        }
+      }
+    }
+  }
+}

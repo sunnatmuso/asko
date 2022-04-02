@@ -1,0 +1,81 @@
+.menuBurger{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $bg_White;
+  z-index: 98;
+  //transition: none;
+
+  .menuBurger__top{
+    @include flex(flex, space-between, center);
+    min-height: 50px;
+    padding: 0 $space3;
+    border-bottom: 1px solid $border_gray5;
+    .select {
+      //color: $text_gray1;
+      border-radius: $space;
+      padding: $space $space3;
+      @include border($border_gray5);
+      //@include rgba(0.3);
+      background: rgba(255, 0, 0, 1);
+      &__items {
+        top: calc(50% + calc(4px * 4) - 1px);
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+    height: calc(100% - 50px);
+    @include flex(flex, flex-start, center);
+    flex-direction: column;
+    overflow: auto;
+    a{
+      padding: $space2 $space3;
+      font: normal 400 15px/18px $rubik;
+      border-bottom: 1px solid $border_gray5;
+      width: 100%;
+      color: $text_gray2;
+    }
+    .social{
+      padding: $space5 0;
+      margin: auto 0 $space14 0;
+    }
+    .router-link-exact-active, a:hover{
+      color: $text_red;
+    }
+
+  }
+}
+
+.menu {
+  @include btn(5px, -7px);
+  .icon {
+    @include icon(3px, 20px);
+    &:before{
+      @include icon-before(3px, 20px, -7px);
+    }
+    &:after{
+      @include icon-after(3px, 20px, 7px);
+    }
+  }
+  &.open {
+    .icon {
+      transition-duration: 0.5s;
+      background: transparent;
+      &:before{
+        transform: rotateZ(45deg) scaleX(1.25) translate(6.5px, 6.5px);
+        top: -10px;
+      }
+      &:after{
+        transform: rotateZ(-45deg) scaleX(1.25) translate(6px, -6px);
+        top: 10px;
+      }
+    }
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}

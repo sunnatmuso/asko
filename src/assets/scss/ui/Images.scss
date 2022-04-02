@@ -1,0 +1,25 @@
+.images{
+  &.mainBanner{
+    margin-top: $space15;
+    @include media($sm){
+      margin-top: $space10;
+    }
+    img{
+      width: 100%;
+    }
+  }
+  &.shinaDown, &.diskaDown, &.akkumlyatorDown{
+    margin: 30px auto 61px auto;
+    img{
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  &.companyTop{
+    margin: 30px auto;
+    img{
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+.bgWrapMain, .Diska, .Akkumulyator{
+  background-image: url("../image/bg/image11.webp");
+  background-size: 100%;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-position: right;
+  position: relative;
+  z-index: 1;
+  &.Diska{
+    background-image: url("../image/bg/diska.webp");
+    background-position: center;
+  }
+  &.Akkumulyator{
+    background-image: url("../image/bg/akkumlyator.webp");
+    background-position: center;
+  }
+  &__leftBottom{
+    @include wh(334px);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: -1;
+  }
+  &__image1{
+    position: absolute;
+    right: -300px;
+    top: 5%;
+    z-index: -1;
+    text-align: end;
+    img {
+      animation: rotating 10s linear infinite;
+    }
+    @keyframes rotating {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    &.diskaRight{
+      right: -200px;
+      top: 10%;
+    }
+    &.akkTor{
+      right: -100px;
+      top: 10%;
+      img {
+        animation: 2s linear 1s infinite alternate akk;
+      }
+      @keyframes akk {
+        from {
+          transform: translateY(0);
+        }
+        to {
+          transform: translateY(30px);
+        }
+      }
+    }
+  }
+  &__image12{
+    position: absolute;
+    right: 0;
+    top: 80%;
+    z-index: -1;
+    width: 100%;
+    //height: 100%;
+    text-align: end;
+    @include media($lg){
+      top: 60%;
+    }
+  }
+  &__image13{
+    position: absolute;
+    right: 250px;
+    top: 25%;
+    z-index: -1;
+    width: 100%;
+    //height: 100%;
+    text-align: end;
+  }
+}

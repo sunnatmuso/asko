@@ -1,0 +1,27 @@
+.modalInput{
+  &__item {
+    margin: $space5 0;
+
+    &:last-child{
+      margin: 0;
+    }
+    &:nth-child(3){
+      margin-top: $space7;
+    }
+    .btn, a{
+      width: 100%;
+      text-align: center;
+    }
+    input, label{
+      width: 100%;
+      color: $text_gray3;
+    }
+    input{
+      padding: calc(#{$space2} + 2px) $space4;
+      margin-top: $space;
+      background-color: $bg_gray6;
+      border-radius: $space3;
+      @include border($border_gray5);
+    }
+  }
+}

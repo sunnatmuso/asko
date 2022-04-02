@@ -1,0 +1,10 @@
+.breadcrumbs{
+  padding: $space7 0 $space8 0;
+  &__wrap, &__home{
+   @include flex(flex, flex-start, center);
+  }
+
+  &__title{
+    color: $text_red;
+  }
+}

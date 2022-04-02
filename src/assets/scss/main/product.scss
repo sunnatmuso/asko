@@ -1,0 +1,86 @@
+.product{
+  &__loader{
+    min-height: 300px;
+  }
+  &__content{
+    @include grid(2, $space7);
+    width: 100%;
+    background-color: $bg_White;
+    padding: $space7;
+    margin-bottom: $space15;
+    box-shadow: $depth0;
+    border-radius: $space2;
+    @include media($lg){
+      @include grid(1, $space7);
+    }
+    @include media($sm){
+      padding: 0;
+    }
+  }
+  &__left{
+    @include wh(540px);
+    overflow: hidden;
+    border-radius: $space2;
+    border: 2px solid $border_gray5;
+    @include flex(flex, center, center);
+    @include media($lg){
+      width: 100%;
+    }
+    @include media($sm){
+      height: 350px;
+    }
+    .carouselWrapper{
+      @include wh(100%);
+      & > div, .splide__track{
+        height: 100%;
+      }
+    }
+  }
+  &__img{
+    //@include wh(540px);
+    //display: inline-block;
+    height: 100%;
+    img{
+      object-fit: contain;
+      @include wh(100%);
+    }
+  }
+  &__right{
+    @include flex(flex, flex-start, flex-start);
+    flex-direction: column;
+    @include media($sm){
+      padding: $space3;
+    }
+    h1{
+      color: $text_gray1;
+      @include media($sm){
+        line-height: 30px;
+      }
+    }
+    .about{
+      margin-top: $space6;
+      @include media($sm){
+        margin-top: $space3;
+      }
+      &__item{
+        @include flex(flex, flex-start, center);
+        margin-bottom: $space;
+        .paragraph{
+          &:first-child{
+            color: $text_gray2;
+          }
+          &:last-child{
+            color: $text_black;
+            margin-left: $space2;
+          }
+        }
+      }
+    }
+    & > .btn {
+      margin-top: auto;
+      @include media($lg){
+        margin-top: $space3;
+      }
+    }
+  }
+}

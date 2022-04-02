@@ -1,0 +1,64 @@
+.locationShops{
+  &__maps{
+    margin-bottom: $space8;
+    &-wrap{
+      display: grid;
+      grid-template-columns: 30% 70%;
+      gap: $space7;
+      min-height: 600px;
+      @include media($md){
+        grid-template-columns: 40% 60%;
+        gap: $space5;
+        min-height: 500px;
+      }
+      @include media($sm){
+        grid-template-columns: 1fr;
+      }
+    }
+    &-left{
+      background-color: $bg_White;
+      border-radius: $space2;
+      box-shadow: $depth0;
+      //padding: 0 $space4;
+      .logo{
+        text-align: center;
+        margin: $space7 0;
+      }
+      .markets{
+        color: $text_gray2;
+        padding: 0 $space4;
+      }
+    }
+    &-items{
+      margin: $space7 0;
+    }
+    &-item{
+      @include flex(flex, flex-start, flex-start);
+      padding: $space3 $space4;
+      width: 100%;
+      &:hover{
+        background-color: $bg_gray6;
+      }
+      .look{
+        .small{
+          margin: 0 0 $space2 $space;
+        }
+      }
+    }
+    &-right{
+      width: calc(100% - #{$space7});
+      @include media($md){
+        width: calc(100% - #{$space5});
+      }
+      @include media($sm){
+        width: 100%;
+        min-height: 400px;
+      }
+      iframe{
+        border: 3px solid $border_white !important;
+        border-radius: $space2;
+        @include wh(100%)
+      }
+    }
+  }
+}

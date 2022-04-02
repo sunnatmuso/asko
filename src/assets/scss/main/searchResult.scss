@@ -1,0 +1,17 @@
+.searchResult {
+  .cardWrapper__title{
+    margin: $space6 0;
+    @include flex(flex, center, center);
+    flex-direction: column-reverse;
+  }
+  &__content{
+    @include grid(4, $space6);
+    margin: $space10 auto;
+    @include media($lg){
+      @include grid(3, $space6);
+    }
+    @include media($sm){
+      @include grid(2, $space6);
+    }
+  }
+}

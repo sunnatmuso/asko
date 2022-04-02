@@ -1,0 +1,29 @@
+.filterSelect{
+  display: inline-flex;
+  &__value{
+    @include flex(inline-flex, space-between, center);
+    min-width: 260px;
+    border-radius: $space3;
+    padding: calc(#{$space2} + 2px) $space4;
+    background-color: $bg_gray6;
+  }
+
+  position: relative;
+  &__items{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: $bg_White;
+    border-radius: $space2;
+    box-shadow: $depth1;
+    z-index: 9;
+  }
+  &__item{
+    padding: $space3 $space4;
+    border-bottom: 1px solid $border_gray5;
+    &:hover{
+      background-color: $bg_gray6;
+    }
+  }
+}

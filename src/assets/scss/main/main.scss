@@ -1,0 +1,155 @@
+.main {
+  &__banner, .mainBanner {
+    &__wrapper {
+      @include flex(flex, center, center);
+      width: 100%;
+      transition: none;
+    }
+
+    &__item{
+      width: 33.3%;
+      height: 100%;
+      background-size: contain;
+      @include media($md){
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      &:hover{
+        .bannerBtn{
+          &:after{
+            opacity: 1;
+            transform: translateY(0) rotateX(0);
+          }
+          &:before{
+            opacity: 0;
+            transform: translateY(-50%) rotateX(-90deg);
+          }
+        }
+      }
+      //
+      //&.shina{
+      //  background-image: url("../image/banner/shina.webp");
+      //}
+      //&.diska{
+      //  background-image: url("../image/banner/diska.webp");
+      //}
+      //&.akkumlyator{
+      //  background-image: url("../image/banner/akkumlyator.webp");
+      //}
+    }
+    &__bg{
+      @include wh(100%);
+      background-color: rgba(0,0,0,.67);
+      @include flex(flex, center, center);
+      flex-direction: column;
+      color: $text_white;
+      &:hover {
+        background-color: rgba(0,0,0,0.1);
+      }
+      .body {
+        margin-top: $space5;
+      }
+
+      $speed: 0.5s;
+      .bannerBtn {
+        opacity: 1;
+        outline: 0;
+        color: $text_white;
+        line-height: 40px;
+        position: relative;
+        text-align: center;
+        letter-spacing: 1px;
+        display: inline-block;
+        text-decoration: none;
+
+        &:after{
+          top: 0;
+          left: 0;
+          opacity: 0;
+          width: 100%;
+          color: $bg_White;
+          display: block;
+          transition: $speed;
+          position: absolute;
+          background: $bg_red;
+          border-radius: $space2;
+          content: attr(data-back);
+          transform: translateY(50%) rotateX(-90deg);
+        }
+
+        &:before{
+          top: 0;
+          left: 0;
+          opacity: 1;
+          color: $text_white;
+          display: block;
+          padding: 0 30px;
+          line-height: 40px;
+          transition: $speed;
+          position: relative;
+          //background: #323237;
+          content: attr(data-front);
+          transform: translateY(0) rotateX(0);
+        }
+      }
+    }
+    &__one{
+      width: 100%;
+      img{
+        width: 100%;
+        height: 694px;
+      }
+    }
+  }
+  &__specialOffers{
+    .specialOffers{
+      @include grid(4, $space7);
+      @include media(800px){
+        @include grid(3, $space7);
+      }
+      @include media($sm){
+        @include grid(2, $space7);
+      }
+      @include media($mobile){
+        @include grid(2, $space3);
+      }
+    }
+  }
+
+  &__title{
+    .cardWrapper__title{
+      padding: $space15 0;
+      @include media($sm){
+        padding: $space9 0;
+      }
+      @include media($smMobile){
+        padding: $space5 0;
+      }
+    }
+
+    &.cardsCarousel{
+      & > .cardWrapper >.container{
+        max-width: 1235px;
+      }
+      .splide__slide{
+        @include flex(flex, center, center);
+        .card{
+          margin: 0 $space3;
+          @include wh(100%);
+          @include media($mobile){
+            margin: 0 $space2;
+          }
+          &:hover{
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+  &__brands{
+    margin-bottom: $space15;
+  }
+}

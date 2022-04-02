@@ -1,0 +1,28 @@
+.cardWrapper{
+  &__title{
+    text-align: center;
+    .body{
+      padding: 0 $space2;
+      color: $text_red;
+    }
+    h1{
+      position: relative;
+      display: inline-block;
+      &::after,  &:before{
+        content: "";
+        position: absolute;
+        //top: 0;
+        @include wh($space2);
+        background: $bg_red;
+        border-radius: 150px;
+        transform: translateY(18px);
+      }
+      &::before{
+        left: -15px;
+      }
+      &::after{
+        right: -15px;
+      }
+    }
+  }
+}

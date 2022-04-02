@@ -1,0 +1,44 @@
+.card {
+  display: inline-block;
+  background: $bg_White;
+  border-radius: $space2;
+  max-width: 270px;
+  //min-width: 270px;
+  overflow: hidden;
+
+  &:hover{
+    box-shadow: $depth1;
+   //.card__image {
+   //  transform: scale3d(1.1);
+   //}
+  }
+  &__image{
+    overflow: hidden;
+    //@include wh(270px);
+    max-height: 270px;
+    max-width: 270px;
+    width: 100%;
+    padding: $space;
+    img{
+      @include wh(100%);
+    }
+  }
+  &__about{
+    @include flex(flex, center, center);
+    padding: $space4;
+    flex-direction: column;
+    border-top: 1px solid $border_gray5;
+    @include media($smMobile){
+      padding: $space2;
+    }
+    .cardText{
+      margin-bottom: $space2;
+      text-align: center;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 2;
+    }
+  }
+}

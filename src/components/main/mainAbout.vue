@@ -17,7 +17,10 @@
         </Splide>
         <Splide :options="thumbsOptions" ref="mainThumbs" class="mainThumbs">
           <SplideSlide v-for="(thumb, i) in testimonials" :key="i">
-            <img :src="thumb.image" alt="image">
+            <div class="wrap">
+              <h1>{{thumb.letter}}</h1>
+              <img :src="thumb.image" alt="image">
+            </div>
           </SplideSlide>
         </Splide>
       </div>

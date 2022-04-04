@@ -26,6 +26,7 @@ const thumbsOptions = {
     rewind      : true,
     gap         : '1em',
     pagination  : false,
+    focus: 'center',
     arrows: false,
     fixedWidth  : 86,
     fixedHeight : 86,

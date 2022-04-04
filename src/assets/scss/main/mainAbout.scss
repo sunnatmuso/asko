@@ -39,6 +39,15 @@ $thumbColor: #22559E;
         margin: $space6 0 $space7 0;
         padding: $space6;
       }
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 3.5px;
+        @include wh(15px);
+        background-color: #828282;
+        transform: rotate(45deg) translateY(15px);
+      }
 
       .splide__arrows{
 
@@ -75,11 +84,32 @@ $thumbColor: #22559E;
           border: 1px solid $border_gray5 !important;
           background-color: $thumbColor;
         }
+       .wrap{
+          @include wh(100%);
+          @include flex(flex, center, center);
+          img{
+            width: 0;
+          }
+         h1{
+           position: absolute;
+           @include wh(100%);
+           @include flex(flex, center, center);
+         }
+        }
+
+        &:hover, &.is-active{
+          h1{
+            display: none;
+          }
+          img{
+            width: 100%;
+          }
+        }
       }
 
-      .splide__list{
-        justify-content: center;
-      }
+      //.splide__list{
+      //  justify-content: center;
+      //}
     }
   }
 }

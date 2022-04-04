@@ -39,7 +39,6 @@ import MainBanner from "../components/main/mainBanner";
 import CardWrapper from "../components/ui/cardWrapper";
 import Card from "../components/ui/card";
 import Carousel from "../components/ui/carousel";
-import {computed, reactive,} from "vue";
 import Brands from "../components/ui/Brands";
 import MainAbout from "../components/main/mainAbout";
 import Images from "../components/ui/Images";
@@ -52,18 +51,8 @@ export default {
   components: {Parallax, Images, MainAbout, Brands, Card, CardWrapper, MainBanner, Carousel},
   setup(){
     const {media} = useMedia()
-    const data = reactive(computed( () => [
-      {img: require('../assets/image/specialOffers/image3.png'), about: 'DEMETER 195/65/15'},
-      {img: require('../assets/image/specialOffers/image3.png'), about: 'DEMETER 195/65/15'},
-      {img: require('../assets/image/specialOffers/image3.png'), about: 'DEMETER 195/65/15'},
-      {img: require('../assets/image/specialOffers/image3.png'), about: 'DEMETER 195/65/15'},
-      {img: require('../assets/image/specialOffers/image3.png'), about: 'DEMETER 195/65/15'},
-      {img: require('../assets/image/specialOffers/image3.png'), about: 'DEMETER 195/65/15'},
-      {img: require('../assets/image/specialOffers/image3.png'), about: 'DEMETER 195/65/15'},
-      {img: require('../assets/image/specialOffers/image3.png'), about: 'DEMETER 195/65/15'}
-    ]))
     const {mainBanner, cards, brands} = useCarousel()
-    return {media, mainBanner, cards, data, brands, brand, products, newProducts}
+    return {media, mainBanner, cards, brands, brand, products, newProducts}
   }
 }
 </script>

@@ -9,7 +9,7 @@
           <Card :data="item"/>
         </template>
       </div>
-      <NotFounds v-else type="products" :image="require('../assets/image/notFound/notProducts.webp')" :title="$t('noProducts')"/>
+      <NotFounds v-else type="products" :image="require('../assets/image/notFound/noProducts.webp')" :title="$t('noProducts')"/>
     </CardWrapper>
   </div>
 </template>

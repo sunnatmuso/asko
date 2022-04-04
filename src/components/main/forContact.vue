@@ -18,14 +18,14 @@
             <div class="contact__content-item">
               <div class="icon"><SvgIcon icon-class="mail" wh="30"/></div>
               <div class="title">
-                <p class="markets"><a :href="`mailto:${contacts.email1}`">{{contacts.mail1}}</a></p>
+                <p class="markets"><a :href="`mailto:${contacts.email1}`">{{contacts.email1}}</a></p>
 <!--                <p class="markets"><a :href="`mailto:${contacts.mail2}`">{{contacts.mail2}}</a></p>-->
               </div>
             </div>
             <div class="contact__content-item">
               <div class="icon"><SvgIcon icon-class="address" wh="30"/></div>
               <div class="title">
-                <p class="markets"><a :href="''" @click="seeFromMap(contacts.address.map)">{{ contacts.address[`address_${$i18n.locale}`] }}</a></p>
+                <p class="markets"><a :href="''" @click="seeFromMap(contacts.address[0].map)">{{ contacts.address[0][`address_${$i18n.locale}`] }}</a></p>
               </div>
             </div>
           </div>

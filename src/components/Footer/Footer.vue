@@ -30,7 +30,7 @@
           <p class="inter">{{$t('addressMarket')}}</p>
           <div class="footer__location">
             <SvgIcon icon-class="location" class-name="location" height="24" width="24"/>
-            <p class="body_2">{{contacts.address[`address_${$i18n.locale}`]}}</p>
+            <p class="body_2">{{contacts.address[0][`address_${$i18n.locale}`]}}</p>
           </div>
         </div>
       </div>

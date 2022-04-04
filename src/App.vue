@@ -1,5 +1,5 @@
 <template>
-  <Loader v-if="loader" class="loaderApp" loader8="12"/>
+  <Loader v-if="loader" class="loaderApp" loader12="11"/>
   <Header v-if="!media.$md"/>
   <MobileHeader v-else-if="!loader && $router.currentRoute.value.path !== '/chat'"/>
   <router-view/>

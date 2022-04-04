@@ -36,7 +36,8 @@
     "requestAccepted": "Arizangiz yuborildi!",
     "getRequest": "Tabriklaymiz, arizangiz qabul qilindi!",
     "text": "Xodimlarimiz tez orada siz bilan bog'lanadi, iltimos aloqada bo'ling.",
-    "close": "Yopish"
+    "close": "Yopish",
+    "requiredName": "Ushbu maydon to'ldirilishi shart"
   },
   "readMore": "Batafsil",
   "socialMedia": "IJTIMOIY TARMOQLARDA",

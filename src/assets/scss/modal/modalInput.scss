@@ -2,6 +2,11 @@
   &__item {
     margin: $space5 0;
 
+    .small {
+      color: $text_red;
+      height: 14px;
+    }
+
     &:last-child{
       margin: 0;
     }

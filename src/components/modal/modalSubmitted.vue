@@ -9,7 +9,7 @@
         <p class="cardText">{{$t('modal.text')}}</p>
       </div>
       <div class="modalSubmitted__close">
-        <Btn type="blue" @click="close = false" text-font="cardText">{{$t('close')}}</Btn>
+        <Btn type="blue" @click="close = false" text-font="cardText">{{$t('modal.close')}}</Btn>
       </div>
     </div>
   </ModalBase>

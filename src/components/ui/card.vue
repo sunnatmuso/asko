@@ -1,7 +1,7 @@
 <template>
   <div class="card p" v-if="data">
     <div class="card__image" ref="image">
-      <img :src="data.image[0].image" :alt="data.image[0].name">
+      <img :style="height > 0 ? `height: ${height}px` : `height: 100%`" :src="data.image[0].image" :alt="data.image[0].name">
     </div>
     <div class="card__about">
       <p class="cardText">{{data[`name_${$i18n.locale}`]}}</p>

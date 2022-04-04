@@ -12,17 +12,17 @@
             </Carousel>
           </div>
           <div class="product__right">
-            <h1>{{productInfo[`name_${$i18n.locale}`]}}</h1>
+            <h1 v-if="productInfo[`name_${$i18n.locale}`]">{{productInfo[`name_${$i18n.locale}`]}}</h1>
             <div class="about">
-              <div class="about__item">
+              <div class="about__item" v-if="productInfo.company_name[`name_${$i18n.locale}`]">
                 <p class="paragraph">{{$t('productInfo.item1')}}</p>
                 <p class="paragraph">{{productInfo.company_name[`name_${$i18n.locale}`]}}</p>
               </div>
-              <div class="about__item">
+              <div class="about__item" v-if="productInfo[`model_${$i18n.locale}`]">
                 <p class="paragraph">{{$t('productInfo.item2')}}</p>
                 <p class="paragraph">{{productInfo[`model_${$i18n.locale}`]}}</p>
               </div>
-              <div class="about__item">
+              <div class="about__item" v-if="productInfo[`size_${$i18n.locale}`]">
                 <p class="paragraph">{{$t('productInfo.item3')}}</p>
                 <p class="paragraph">{{productInfo[`size_${$i18n.locale}`]}}</p>
               </div>
@@ -30,19 +30,19 @@
 <!--                <p class="paragraph">{{$t('productInfo.item4')}}</p>-->
 <!--                <p class="paragraph">{{productInfo[`power_${$i18n.locale}`]}}</p>-->
 <!--              </div>-->
-              <div class="about__item">
+              <div class="about__item" v-if="productInfo[`power_${$i18n.locale}`]">
                 <p class="paragraph">{{$t('productInfo.item5')}}</p>
                 <p class="paragraph">{{productInfo[`power_${$i18n.locale}`]}}</p>
               </div>
-              <div class="about__item">
+              <div class="about__item" v-if="productInfo[`season_${$i18n.locale}`]">
                 <p class="paragraph">{{$t('productInfo.item6')}}</p>
                 <p class="paragraph">{{productInfo[`season_${$i18n.locale}`]}}</p>
               </div>
-              <div class="about__item">
+              <div class="about__item" v-if="productInfo[`country_${$i18n.locale}`]">
                 <p class="paragraph">{{$t('productInfo.item7')}}</p>
                 <p class="paragraph">{{productInfo[`country_${$i18n.locale}`]}}</p>
               </div>
-              <div class="about__item">
+              <div class="about__item" v-if="productInfo.date">
                 <p class="paragraph">{{$t('productInfo.item8')}}</p>
                 <p class="paragraph">{{productInfo.date}}</p>
               </div>

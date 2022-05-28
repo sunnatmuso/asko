@@ -47,13 +47,8 @@ const mainBanner = {
     perPage   : 1,
     arrows: false,
     pagination: false,
-    // autoplay: 1,
-    // interval: 3000,
-    breakpoints: {
-        576.98: {
-            arrows: false,
-        },
-    }
+    autoplay: 1,
+    interval: 3000,
 };
 
 const cards = {

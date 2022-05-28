@@ -5,9 +5,7 @@
         <div class="footer__logo">
           <img src="../../assets/image/ASKO2.webp" alt="logo">
         </div>
-        <p class="paragraph">
-          {{contacts[`about_logo_${$i18n.locale}`]}}
-<!--          <span class="footerText">ASKO</span>-->
+        <p class="paragraph" v-html="contacts[`about_logo_${$i18n.locale}`]">
         </p>
       </div>
       <div class="footer_down">
@@ -30,7 +28,7 @@
           <p class="inter">{{$t('addressMarket')}}</p>
           <div class="footer__location">
             <SvgIcon icon-class="location" class-name="location" height="24" width="24"/>
-            <p class="body_2">{{contacts.address[0][`address_${$i18n.locale}`]}}</p>
+            <p class="body_2">{{ contacts.address[0][`address_${$i18n.locale}`]}}</p>
           </div>
         </div>
       </div>

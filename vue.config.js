@@ -6,9 +6,9 @@ function resolve(dir) {
 }
 
 module.exports = {
-    publicPath: process.env.NODE_ENV === 'production'
-        ? '/asko/'
-        : '/',
+    // publicPath: process.env.NODE_ENV === 'production'
+    //     ? '/asko/'
+    //     : '/',
     pluginOptions: {
         i18n: {
             locale: 'uz',

@@ -25,8 +25,8 @@
       </template>
       <SplideSlide>
         <div class="mainBanner__wrapper" :style="media.$sm ? `height: 400px` : `height: ${height}px`" ref="content">
-          <div class="mainBanner__one">
-            <img src="https://picsum.photos/539/354" alt="image lorem">
+          <div class="mainBanner__one" :style="`background-image: url(${slider2.image})`">
+<!--            <img :src="slider2.image" alt="image lorem">-->
           </div>
         </div>
       </SplideSlide>
@@ -41,7 +41,7 @@ import {useCarousel} from "../../hooks/ui/useCarousel";
 import useImageHeight from "../../hooks/ui/useImageHeight";
 import {ref} from "vue";
 import {useMedia} from "../../hooks/ui/useMedia";
-import {slider} from "../../hooks/about/useAbout";
+import {slider, slider2} from "../../hooks/about/useAbout";
 import useFilters from "../../hooks/product/useFilters";
 export default {
   name: "mainBanner",
@@ -51,7 +51,7 @@ export default {
     const {media} = useMedia()
     const content = ref(null)
     const {height} = useImageHeight(content)
-    return {media, height, mainBanner, content, slider, useFilters}
+    return {media, height, mainBanner, content, slider, useFilters, slider2}
   }
 }
 </script>

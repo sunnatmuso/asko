@@ -2,6 +2,7 @@ import axios from "axios";
 import {ref} from "vue";
 import {base_url} from "../baseUrl";
 const slider = ref(null)
+const slider2 = ref(null)
 const brand = ref(null)
 const products = ref(null)
 const newProducts = ref(null)
@@ -11,6 +12,7 @@ const marka = ref(null)
 const company = ref(null)
 const address = ref(null)
 const about = ref(null)
+const banner = ref(null)
 const loader = ref(false)
 export async function useAbout(){
     const urls = [
@@ -23,6 +25,8 @@ export async function useAbout(){
         `${base_url}company/`,
         `${base_url}address/`,
         `${base_url}about/`,
+        `${base_url}slider2/`,
+        `${base_url}banner/`,
     ]
     try {
         loader.value = true
@@ -36,6 +40,8 @@ export async function useAbout(){
             company.value = res[6].data
             address.value = res[7].data
             about.value = res[8].data
+            slider2.value = res[9].data
+            banner.value = res[10].data
             newProducts.value = products.value.filter(e => e.new === true)
         })
         setTimeout(() => loader.value = false, 1000)
@@ -44,4 +50,4 @@ export async function useAbout(){
     }
 }
 
-export { slider, brand, products, testimonials, contacts, newProducts, marka, company, address, about, loader }
+export { slider, brand, products, testimonials, contacts, newProducts, marka, company, address, about, loader, slider2, banner }

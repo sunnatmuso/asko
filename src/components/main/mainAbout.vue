@@ -11,9 +11,7 @@
       </div>
       <div class="mainAbout__wrapper">
         <Splide :options="thumbOptions" ref="mains" class="mains">
-          <SplideSlide v-for="(text, i) in testimonials" :key="i">
-            <p class="paragraph">{{text[`desc_${$i18n.locale}`]}}</p>
-          </SplideSlide>
+          <SplideSlide v-for="(text, i) in testimonials" :key="i" v-html="text[`desc_${$i18n.locale}`]"></SplideSlide>
         </Splide>
         <Splide :options="thumbsOptions" ref="mainThumbs" class="mainThumbs">
           <SplideSlide v-for="(thumb, i) in testimonials" :key="i">

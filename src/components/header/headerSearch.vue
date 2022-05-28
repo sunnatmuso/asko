@@ -1,6 +1,6 @@
 <template>
   <div class="header__search">
-    <input type="text" :placeholder="$t('home.search')" @change="getValue" @focus="$router.push('/searchResult')">
+    <input type="text" :placeholder="$t('home.search')" @change="getValue($event); $router.push('/searchResult')">
     <SvgIcon v-if="!icon" icon-class="search" wh="18" class-name="search"/>
     <SvgIcon v-else icon-class="close" wh="18" class-name="search close" @click="$emit('close')"/>
   </div>

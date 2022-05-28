@@ -69,6 +69,13 @@ $thumbColor: #22559E;
           left: -1.5em;
         }
       }
+
+      p {
+        font: normal 400 18px/150% $rubik;
+        @include media($sm){
+          font-size: 15px;
+        }
+      }
     }
     .mainThumbs{
 

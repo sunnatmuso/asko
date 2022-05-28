@@ -9,7 +9,7 @@
           </template>
         </CardWrapper>
       </section>
-      <Images :image="require('../assets/image/Rectangle 7.webp')" type="mainBanner container"/>
+      <Images v-if="banner" :image="banner.image" type="mainBanner container"/>
       <Parallax v-if="!media.$lg" name="bgWrapMain__leftBottom" :image="require('../assets/image/bg/image18.webp')"/>
       <Parallax name="bgWrapMain__image1" :image="require('../assets/image/bg/image1.webp')"/>
       <Parallax name="bgWrapMain__image12" :image="require('../assets/image/bg/image12.webp')"/>
@@ -44,7 +44,7 @@ import MainAbout from "../components/main/mainAbout";
 import Images from "../components/ui/Images";
 import Parallax from "../components/ui/Parallax";
 import {useMedia} from "../hooks/ui/useMedia";
-import {brand, products, newProducts} from "../hooks/about/useAbout";
+import {brand, products, newProducts, banner} from "../hooks/about/useAbout";
 
 export default {
   name: 'Home',
@@ -52,7 +52,7 @@ export default {
   setup(){
     const {media} = useMedia()
     const {mainBanner, cards, brands} = useCarousel()
-    return {media, mainBanner, cards, brands, brand, products, newProducts}
+    return {media, mainBanner, cards, brands, brand, products, newProducts, banner}
   }
 }
 </script>

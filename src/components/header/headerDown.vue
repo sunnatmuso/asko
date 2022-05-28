@@ -3,7 +3,7 @@
     <div class="container">
       <div class="headerDown">
         <div class="headerDown__logo p" @click="$router.push('/')">
-          <img src="../../assets/image/ASKO2.webp" alt="logo webp">
+          <img src="../../assets/logoAsko.svg" alt="logo webp">
         </div>
         <div class="headerDown__right body">
           <router-link to="/">{{$t('home.main')}}</router-link>

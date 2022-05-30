@@ -39,7 +39,7 @@ export async function useAbout(){
             marka.value = res[5].data
             company.value = res[6].data
             address.value = res[7].data
-            about.value = res[8].data
+            about.value = res[8].DATA
             slider2.value = res[9].data
             banner.value = res[10].data
             newProducts.value = products.value.filter(e => e.new === true)
